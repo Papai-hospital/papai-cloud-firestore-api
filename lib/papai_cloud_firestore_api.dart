@@ -1,20 +1,7 @@
-library flutter_pkg;
+library papai_cloud_firestore_api;
 
-import 'package:fake_cloud_firestore/fake_cloud_firestore.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-
-abstract class CloudFireStore {
-  FirebaseFirestore get firebaseInstance;
-}
-
-class FireBaseCloudFireStoreAPI implements CloudFireStore {
-  final _firebaseInstance = FirebaseFirestore.instance;
-  @override
-  FirebaseFirestore get firebaseInstance => _firebaseInstance;
-}
-
-class FakeFireBaseCloudFireStoreAPI implements CloudFireStore {
-  final _firebaseInstance = FakeFirebaseFirestore();
-  @override
-  FirebaseFirestore get firebaseInstance => _firebaseInstance;
-}
+export 'src/papai_cloud_firestore_api.dart'
+    show
+        CloudFireStore,
+        FireBaseCloudFireStoreAPI,
+        FakeFireBaseCloudFireStoreAPI;
